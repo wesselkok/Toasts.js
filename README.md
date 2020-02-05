@@ -36,7 +36,7 @@
 ```js
 
 // Create a Toast and display after x seconds
-var myToast = Toast({title: 'Sorry,', description: 'Something went wrong.', type: 'error'});
+var myToast = new Toast({title: 'Sorry,', description: 'Something went wrong.', type: 'error'});
 var x = 300;
 setTimeout(myToast.show(), x);
 
