@@ -1,0 +1,257 @@
+/*
+ * Toasts.js
+ * Copyright 2020
+ * Authors: Wessel Kok.
+ * All Rights Reserved.
+ * Use, reproduction, distribution, and modification of this code is subject to the terms and
+ * conditions of the MIT license, available at http://www.opensource.org/licenses/mit-license.php
+ *
+ * Project: https://github.com/wesselkok/Toasts.js
+ */
+ html,
+ body {
+   width: 100%;
+   height: 100%;
+ }
+ 
+ body {
+   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+ }
+ 
+ a {
+   color: #fdcc52;
+   transition: all .35s;
+ }
+ 
+ a:hover, a:focus {
+   color: #fcbd20;
+ }
+ 
+ hr {
+   max-width: 100px;
+   margin: 25px auto 0;
+   border-width: 1px;
+   border-color: rgba(34, 34, 34, 0.1);
+ }
+ 
+ hr.light {
+   border-color: white;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+   font-weight: 200;
+   letter-spacing: 1px;
+ }
+ 
+ p {
+   font-size: 18px;
+   line-height: 1.5;
+   margin-bottom: 20px;
+ }
+ 
+ section {
+   padding: 100px 0;
+ }
+ 
+ section h2 {
+   font-size: 50px;
+ }
+ 
+ #mainNav {
+   border-color: rgba(34, 34, 34, 0.05);
+   background-color: white;
+   transition: all .35s;
+   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+   font-weight: 200;
+   letter-spacing: 1px;
+ }
+ 
+ #mainNav .navbar-brand {
+   color: #fdcc52;
+   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+   font-weight: 200;
+   letter-spacing: 1px;
+ }
+ 
+ #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+   color: #fcbd20;
+ }
+ 
+ #mainNav .navbar-toggler {
+   font-size: 12px;
+   padding: 8px 10px;
+   color: #222222;
+ }
+ 
+ #mainNav .navbar-nav > li > a {
+   font-size: 11px;
+   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+   letter-spacing: 2px;
+   text-transform: uppercase;
+ }
+ 
+ #mainNav .navbar-nav > li > a.active {
+   color: #fdcc52 !important;
+   background-color: transparent;
+ }
+ 
+ #mainNav .navbar-nav > li > a.active:hover {
+   background-color: transparent;
+ }
+ 
+ #mainNav .navbar-nav > li > a,
+ #mainNav .navbar-nav > li > a:focus {
+   color: #222222;
+ }
+ 
+ #mainNav .navbar-nav > li > a:hover,
+ #mainNav .navbar-nav > li > a:focus:hover {
+   color: #fdcc52;
+ }
+ 
+ @media (min-width: 992px) {
+   #mainNav {
+     border-color: transparent;
+     background-color: transparent;
+   }
+   #mainNav .navbar-brand {
+     color: fade(white, 70%);
+   }
+   #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+     color: white;
+   }
+   #mainNav .navbar-nav > li > a,
+   #mainNav .navbar-nav > li > a:focus {
+     color: rgba(255, 255, 255, 0.7);
+   }
+   #mainNav .navbar-nav > li > a:hover,
+   #mainNav .navbar-nav > li > a:focus:hover {
+     color: white;
+   }
+   #mainNav.navbar-shrink {
+     border-color: rgba(34, 34, 34, 0.1);
+     background-color: white;
+   }
+   #mainNav.navbar-shrink .navbar-brand {
+     color: #222222;
+   }
+   #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
+     color: #fdcc52;
+   }
+   #mainNav.navbar-shrink .navbar-nav > li > a,
+   #mainNav.navbar-shrink .navbar-nav > li > a:focus {
+     color: #222222;
+   }
+   #mainNav.navbar-shrink .navbar-nav > li > a:hover,
+   #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
+     color: #fdcc52;
+   }
+ }
+ 
+ header.masthead {
+   position: relative;
+   width: 100%;
+   padding-top: 150px;
+   padding-bottom: 100px;
+   color: white;
+   background: url("../img/bg-pattern.png"), #7b4397;
+   background: url("../img/bg-pattern.png"), linear-gradient(to left, #e0b548, #c77f0c);
+ }
+ 
+ header.masthead .header-content {
+   max-width: 500px;
+   margin-bottom: 100px;
+   text-align: center;
+ }
+ 
+ header.masthead .header-content h1 {
+   font-size: 30px;
+ }
+ 
+ header.masthead .device-container {
+   max-width: 325px;
+   margin-right: auto;
+   margin-left: auto;
+ }
+ 
+ header.masthead .device-container .screen img {
+   border-radius: 3px;
+ }
+ 
+ @media (min-width: 992px) {
+   header.masthead {
+     height: 100vh;
+     min-height: 775px;
+     padding-top: 0;
+     padding-bottom: 0;
+   }
+   header.masthead .header-content {
+     margin-bottom: 0;
+     text-align: left;
+   }
+   header.masthead .header-content h1 {
+     font-size: 50px;
+   }
+   header.masthead .device-container {
+     max-width: 325px;
+   }
+ }
+ 
+ footer {
+   padding: 25px 0;
+   text-align: center;
+   color: rgba(255, 255, 255, 0.3);
+   background-color: #222222;
+ }
+ 
+ footer p {
+   font-size: 12px;
+   margin: 0;
+ }
+ 
+ .text-primary {
+   color: #fdcc52;
+ }
+ 
+ 
+ .btn {
+   border-radius: 300px !important;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   background-color: rgba(255,255,255,0.8) !important;
+   padding: 15px 20px !important;
+   color: #000;
+   transition: all .3s;
+ }
+ 
+ .btn:hover {
+     background-color: rgba(255,255,255,1) !important;
+     color: #000;
+ }
+ 
+
+ /* TOASTS */
+
+.device-container .toast-container {
+  position: absolute;
+  right: 12px;
+  left: 12px;
+  bottom: 12px;
+}
+
+.device-container .toast {
+  width: 100%;
+}
+
+.toast .close {
+  font-size: 1em;
+  line-height: initial;
+  opacity: 1;
+  float: none;
+}
