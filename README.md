@@ -22,14 +22,13 @@
 2. Link to toasts.min.js `<script src="toasts.min.js"></script>`
 
 3. Use Toasts.js to display a toast for success, info, warning, error or custom message
-```js
 
+```js
 // Display a Success Toast
 var myToast = new Toast({title: 'Success', description: 'Your purchase has been confirmed!', type: 'success'}).show();
 
 // Display an Error Toast
 var myToast = new Toast({title: 'Sorry,', description: 'Something went wrong.', type: 'error'}).show();
-
 ```
 
 ### Other Options
