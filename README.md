@@ -8,8 +8,8 @@
 - Demo can be found at ...
 
 ## Download
-- [toasts.min.js](https://github.com/wesselkok/Toasts.js/blob/master/toasts.min.js)
-- [toasts.min.css](https://github.com/wesselkok/Toasts.js/blob/master/toasts.min.css)
+- [toasts.min.js](https://raw.githubusercontent.com/wesselkok/Toasts.js/master/toasts.min.js)
+- [toasts.min.css](https://raw.githubusercontent.com/wesselkok/Toasts.js/master/toasts.min.css)
 
 ## Wiki and Change Log
 [Wiki including Change Log](https://github.com/wesselkok/Toasts.js/wiki)
