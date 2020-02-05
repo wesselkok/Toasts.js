@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Title -->
+	<title>Toasts.js Demo</title>
+
+	<!-- Meta description and open graph tags -->
+	<meta name="description" content="Toasts.js" />
+	<meta property="og:title" content="Toasts.js" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://wesselkok.github.io/Toasts.js/demo.html" />
+	<meta property="og:image" content="" />
+	<meta property="og:site_name" content="Toasts.js" />
+
+	<!-- Meta viewport -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<!-- Style Sheets -->
+	<link rel="stylesheet" href="css/device-mockups.css">
+	<link href="css/demo.css" rel="stylesheet">
+	<link rel="stylesheet" href="../toasts.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="../toasts.min.js"></script>
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-sm navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="https://wesselkok.github.io/Toasts.js">Toasts.js</a>
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="https://wesselkok.github.io/Toasts.js/#download">Download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="https://wesselkok.github.io/Toasts.js/#quick-start">Quick Start</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="https://github.com/wesselkok/Toasts.js">Github</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-7 my-auto">
+          <div class="header-content mx-auto">
+            <h1 class="mb-5">A new way of creating Toast notifications.</h1>
+            <a href="https://github.com/wesselkok/Toasts.js" class="btn btn-outline btn-xl js-scroll-trigger">Check the Github repository</a>
+          </div>
+        </div>
+        <div class="col-lg-5 my-auto">
+          <div class="device-container">
+            <div class="device-mockup iphone6_plus portrait white">
+              <div class="device">
+                <div class="screen">
+                  <div style="height: 100%; width: 100%; background-color: #e2e2e2;">
+                    <h2 style="text-align: center; color: rgba(0,0,0,0.8); padding-top: 5vh;">Toasts.js</h2>
+                    <div class="toast-container">
+                        <div class="toast success" style="display: block;"><div class="toast-content"><div class="icon"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></div><div class="content margin"><div class="title">Success</div><div class="description">Your purchase has been confirmed!</div></div><div class="close"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></div></div></div>
+                        <div class="toast info" style="display: block;"><div class="toast-content"><div class="icon"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></div><div class="content margin"><div class="title">Hello,</div><div class="description">Click the Iphone 6 home button for some magic.</div></div><div class="close"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></div></div></div>
+                    </div>
+				  </div>
+                </div>
+                <div class="button toast-button"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <footer>
+    <div class="container">
+      <p>&copy; Toasts.js 2020. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Additional Javascript (less is more)-->
+  <script>
+    $(document).ready(function () {
+
+        var i = -1;
+        let notifications = [
+            {
+                type: "success",
+                title: "Success",
+                description: "Your purchase has been confirmed!"
+            }, 
+            {
+                type: "info",
+                title: "Friend Request",
+                description: "John Doe wants to be friends with you."
+            },
+            {
+                type: "warning",
+                title: "Oops,",
+                description: "Access denied."
+            },
+            {
+                type: "error",
+                title: "Sorry,",
+                description: "Something went wrong."
+            }
+        ]
+
+        // Function: getNotification
+        var getNotification = function () {
+            i++;
+            if (i === notifications.length) {
+                i = 0;
+            }
+
+            return notifications[i];
+        };
+
+        // Bind: create test
+        $(document).off('click', '.toast-button');
+        $(document).on('click', '.toast-button', function() {
+            // Get notification
+            var notification = getNotification();
+
+            // Create Toast
+            new Toast({'title': notification.title, 'description': notification.description, 'type': notification.type,}).show();
+        });
+    });
+</script>
+
+</body>
+
+</html>
