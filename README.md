@@ -1,5 +1,5 @@
 # Toasts.js
-**Toasts.js** is a Javascript library for non-blocking notifications where jQuery is required. The goal is to create a simple core library that can be customized and extended.
+**Toasts.js** is a Javascript library for non-blocking notifications where jQuery is required. The goal is to create a simple and lightweight library that can be used in every project.
 
 ## Current Version
 1.0.0
@@ -22,161 +22,97 @@
 2. Link to toasts.min.js `<script src="toasts.min.js"></script>`
 
 3. Use Toasts.js to display a toast for success, info, warning, error or custom message
-	```js
+  ```js
   
   // Display a Success Toast
-  new Toast({'title': 'Success', 'description': 'Your purchase has been confirmed!', 'type': 'success'}).show();
+  var myToast = new Toast({title: 'Success', description: 'Your purchase has been confirmed!', type: 'success'}).show();
   
   // Display an Error Toast
-  new Toast({'title': 'Sorry,', 'description': 'Something went wrong.', 'type': 'error'}).show();
+  var myToast = Toast({title: 'Sorry,', description: 'Something went wrong.', type: 'error'}).show();
   
-	```
+  ```
 
 ### Other Options
 ```js
-// Display a warning toast, with no title
-toastr.warning('My name is Inigo Montoya. You killed my father, prepare to die!')
 
-// Display a success toast, with a title
-toastr.success('Have fun storming the castle!', 'Miracle Max Says')
+// Create a Toast and display after x seconds
+var myToast = Toast({title: 'Sorry,', description: 'Something went wrong.', type: 'error'});
+var x = 300;
+setTimeout(myToast.show(), x);
 
-// Display an error toast, with a title
-toastr.error('I do not think that word means what you think it means.', 'Inconceivable!')
+// Display an info Toast, with a title and description
+var myToast = new Toast({title: 'Friend Request', description: 'John Doe wants to be friends with you.', type: 'info'}).show();
 
-// Immediately remove current toasts without using animation
-toastr.remove()
+// Display an error Toast, with a title
+var myToast = new Toast({title: 'Error', type: 'error'}).show();
 
-// Remove current toasts using animation
-toastr.clear()
+// Display a custom Toast, with a title, where your_class_name is your custom class
+var myToast = new Toast({title: 'Error', type: 'your_class_name'}).show();
 
-// Override global options
-toastr.success('We do have the Kapua suite available.', 'Turtle Bay Resort', {timeOut: 5000})
+// Remove created toast
+myToast.remove()
+
 ```
 
-### Escape HTML characters
-In case you want to escape HTML characters in title and message
-
-	toastr.options.escapeHtml = true;
-
-### Close Button
-Optionally enable a close button
+### Use HTML instead of the Title and Description option
+In case you want to use HTML inside op the Toast
 ```js
-toastr.options.closeButton = true;
+var myToast = new Toast({html: '<div>My custom div</div>', type: 'your_class_name'}).show();
 ````
 
-Optionally override the close button's HTML.
-
+### Close Button
+Optionally disable the close button
 ```js
-toastr.options.closeHtml = '<button><i class="icon-off"></i></button>';
+var myToast = new Toast({title: 'Success', type: 'success', closeButton: false}).show();
+````
+
+### Display Sequence and Position
+Show newest Toast at the bottom (top is default)
+```js
+var myToast = new Toast({title: 'Success', type: 'success', newestOnTop: false}).show();
 ```
 
-You can also override the CSS/LESS for `#toast-container .toast-close-button`
-
-Optionally override the hide animation when the close button is clicked (falls back to hide configuration).
+Show Toast at other positions (`bottom-left` is default, other predefined positions are: `top-left`, `top-right`, `bottom-right`)
 ```js
-toastr.options.closeMethod = 'fadeOut';
-toastr.options.closeDuration = 300;
-toastr.options.closeEasing = 'swing';
+var myToast = new Toast({title: 'Success', type: 'success', position: 'top-right'}).show();
 ```
 
-### Display Sequence
-Show newest toast at bottom (top is default)
+Show Toasts at custom positions, where `custom_position_class` is the class for the custom created container
 ```js
-toastr.options.newestOnTop = false;
+var myToast = new Toast({title: 'Success', type: 'success', position: 'custom_position_class'}).show();
 ```
 
 ### Callbacks
 ```js
-// Define a callback for when the toast is shown/hidden/clicked
-toastr.options.onShown = function() { console.log('hello'); }
-toastr.options.onHidden = function() { console.log('goodbye'); }
-toastr.options.onclick = function() { console.log('clicked'); }
-toastr.options.onCloseClick = function() { console.log('close button clicked'); }
+// Define a callback for when the Toast is shown/hidden/clicked
+var myToast = new Toast({title: 'Success', type: 'success', onShown: function() { console.log('Hello'); }}).show();
+var myToast = new Toast({title: 'Success', type: 'success', onHidden: function() { console.log('Goodbye'); }}).show();
+var myToast = new Toast({title: 'Success', type: 'success', onClick: function() { console.log('Clicked'); }}).show();
+var myToast = new Toast({title: 'Success', type: 'success', onCloseClick: function() { console.log('Close button clicked'); }}).show();
 ```
 
-### Animation Options
-Toastr will supply default animations, so you do not have to provide any of these settings. However you have the option to override the animations if you like.
+### Transitions Options
+Toasts.js supplies default transition methods, so you do not have to provide any of these settings. However you have th option to override the transition methods if you like. 
 
-#### Easings
-Optionally override the animation easing to show or hide the toasts. Default is swing. swing and linear are built into jQuery.
+Change Toast show transition method (default is `slideDown`, other options are: `fadeIn` or `show`)
 ```js
-toastr.options.showEasing = 'swing';
-toastr.options.hideEasing = 'linear';
-toastr.options.closeEasing = 'linear';
+var myToast = new Toast({title: 'Success', type: 'success', showMethod: 'fadeIn'}).show();
 ```
-
-Using the jQuery Easing plugin (http://www.gsgd.co.uk/sandbox/jquery/easing/)
+Change Toast hide transition method (default is `fadeOut`, other options are: `slideUp` or `hide`)
 ```js
-toastr.options.showEasing = 'easeOutBounce';
-toastr.options.hideEasing = 'easeInBack';
-toastr.options.closeEasing = 'easeInBack';
+var myToast = new Toast({title: 'Success', type: 'success', hideMethod: 'slideUp'}).show();
 ```
 
-#### Animation Method
-Use the jQuery show/hide method of your choice. These default to fadeIn/fadeOut. The methods fadeIn/fadeOut, slideDown/slideUp, and show/hide are built into jQuery.
+### Durations and Timeout
+Change show- and hide durations (default is `300`) and timeout (default is `5000`) for Toasts in ms
 ```js
-toastr.options.showMethod = 'slideDown';
-toastr.options.hideMethod = 'slideUp';
-toastr.options.closeMethod = 'slideUp';
+var myToast = new Toast({title: 'Success', description: 'Your purchase has been confirmed!', showDuration: 350, hideDuration: 100, timeOut: 3000}).show();
 ```
 
-### Prevent Duplicates
-Rather than having identical toasts stack, set the preventDuplicates property to true. Duplicates are matched to the previous toast based on their message content.
+To prevent Toasts.js from auto closing based on the timeouts, set the  `timeOut` options to `0`
 ```js
-toastr.options.preventDuplicates = true;
+var myToast = new Toast({title: 'Success', description: 'Your purchase has been confirmed!', timeOut: 0}).show();
 ```
-
-### Timeouts
-Control how toastr interacts with users by setting timeouts appropriately.
-```js
-toastr.options.timeOut = 30; // How long the toast will display without user interaction
-toastr.options.extendedTimeOut = 60; // How long the toast will display after a user hovers over it
-```
-
-### Prevent from Auto Hiding
-To prevent toastr from closing based on the timeouts, set the `timeOut` and `extendedTimeOut` options to `0`. The toastr will persist until selected.
-
-```js
-toastr.options.timeOut = 0;
-toastr.options.extendedTimeOut = 0;
-```
-
-### Progress Bar
-Visually indicate how long before a toast expires.
-```js
-toastr.options.progressBar = true;
-```
-
-### rtl
-Flip the toastr to be displayed properly for right-to-left languages.
-```js
-toastr.options.rtl = true;
-```
-
-## Building Toastr
-
-To build the minified and css versions of Toastr you will need [node](http://nodejs.org) installed. (Use Homebrew or Chocolatey.)
-
-```
-npm install -g gulp karma-cli
-npm install
-```
-
-At this point the dependencies have been installed and you can build Toastr
-
-- Run the analytics `gulp analyze`
-- Run the test `gulp test`
-- Run the build `gulp`
-
-## Contributing
-
-For a pull request to be considered it must resolve a bug, or add a feature which is beneficial to a large audience.
-
-Pull requests must pass existing unit tests, CI processes, and add additional tests to indicate successful operation of a new feature, or the resolution of an identified bug.
-
-Requests must be made against the `develop` branch. Pull requests submitted against the `master` branch will not be considered.
-
-All pull requests are subject to approval by the repository owners, who have sole discretion over acceptance or denial.
 
 ## Authors
 **Wessel Kok**
