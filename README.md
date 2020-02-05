@@ -28,7 +28,7 @@
   var myToast = new Toast({title: 'Success', description: 'Your purchase has been confirmed!', type: 'success'}).show();
   
   // Display an Error Toast
-  var myToast = Toast({title: 'Sorry,', description: 'Something went wrong.', type: 'error'}).show();
+  var myToast = new Toast({title: 'Sorry,', description: 'Something went wrong.', type: 'error'}).show();
   
   ```
 
