@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Title -->
+  <title>Toasts.js Demo</title>
+
+  <!-- Meta description and open graph tags -->
+  <meta name="description" content="Toasts.js" />
+  <meta property="og:title" content="Toasts.js" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wesselkok.github.io/Toasts.js/demo.html" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="Toasts.js" />
+
+  <!-- Meta viewport -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="Demo/css/device-mockups.css">
+  <link href="Demo/css/demo.css" rel="stylesheet">
+  <link rel="stylesheet" href="toasts.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script src="toasts.min.js"></script>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-sm navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#home">Toasts.js</a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#demo">Demo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#download">Download</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#quick-start">Quick
+            Start</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="https://github.com/wesselkok/Toasts.js">Github</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <header class="masthead" id="home">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-7 my-auto">
+          <div class="header-content mx-auto">
+            <h1 class="mb-5">A new way of creating Toast notifications.</h1>
+            <a href="#demo" class="btn btn-outline btn-xl js-scroll-trigger">Live demo</a>
+          </div>
+        </div>
+        <div class="col-lg-5 my-auto">
+          <div class="device-container">
+            <div class="device-mockup iphone6_plus portrait white">
+              <div class="device">
+                <div class="screen">
+                  <div style="height: 100%; width: 100%; background-color: #e2e2e2;">
+                    <h2 style="text-align: center; color: rgba(0,0,0,0.8); padding-top: 5vh;">Toasts.js</h2>
+                    <p>Click the Iphone button below for a quick demo.</p>
+                    <div class="toast-container custom">
+                    </div>
+                  </div>
+                </div>
+                <div class="button toast-button"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="full-page" id="demo">
+    <div class="container-fluid h-100">
+      <div class="row h-100 justify-content-between">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-8 my-auto">
+          <div class="content mx-auto">
+            <h2>Demo.</h2>
+            <form class="demo-form">
+              <div class="form-group">
+                <label for="demo-title">Title</label>
+                <input id="demo-title" name="demo-title" placeholder="Success!" type="text" class="form-control"
+                  value="Succes!">
+              </div>
+              <div class="form-group">
+                <label for="demo-description">Description</label>
+                <input id="demo-description" name="demo-description" placeholder="Your purchase has been confirmed!"
+                  type="text" class="form-control" value="Your purchase has been confirmed!">
+              </div>
+              <div class="form-group">
+                <label>Type</label>
+                <div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="demo-type" id="demo-type_0" type="radio" class="custom-control-input" value="success"
+                      checked>
+                    <label for="demo-type_0" class="custom-control-label">Success</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="demo-type" id="demo-type_1" type="radio" class="custom-control-input" value="info">
+                    <label for="demo-type_1" class="custom-control-label">Info</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="demo-type" id="demo-type_2" type="radio" class="custom-control-input" value="warning">
+                    <label for="demo-type_2" class="custom-control-label">Warning</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="demo-type" id="demo-type_3" type="radio" class="custom-control-input" value="error">
+                    <label for="demo-type_3" class="custom-control-label">Error</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Position</label>
+                <div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="demo-position" id="demo-position_0" type="radio" class="custom-control-input"
+                      value="top-left">
+                    <label for="demo-position_0" class="custom-control-label">Top Left</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="demo-position" id="demo-position_1" type="radio" class="custom-control-input"
+                      value="top-right">
+                    <label for="demo-position_1" class="custom-control-label">Top Right</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="demo-position" id="demo-position_2" type="radio" class="custom-control-input"
+                      value="bottom-left">
+                    <label for="demo-position_2" class="custom-control-label">Bottom Left</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="demo-position" id="demo-position_3" type="radio" class="custom-control-input"
+                      value="bottom-right" checked>
+                    <label for="demo-position_3" class="custom-control-label">Bottom Right</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="btn toast-button-demo">Show toast</div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+        <div class="col-lg-1"></div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="read-me" class="read-me">
+    <div class="main-content">
+      <h1 id="toastsjs">Toasts.js</h1>
+      <p><strong>Toasts.js</strong> is a Javascript library for non-blocking notifications where jQuery is required. The
+        goal is to create a simple and lightweight library that can be used in every project.</p>
+
+      <h2 id="current-version">Current Version</h2>
+      <p>1.0.0</p>
+
+      <h2 id="demo">Demo</h2>
+      <ul>
+        <li>Demo can be found at <a
+            href="https://wesselkok.github.io/Toasts.js/">https://wesselkok.github.io/Toasts.js/</a>
+        </li>
+      </ul>
+
+      <h2 id="download">Download</h2>
+      <ul>
+        <li><a href="https://raw.githubusercontent.com/wesselkok/Toasts.js/master/toasts.min.js">toasts.min.js</a></li>
+        <li><a href="https://raw.githubusercontent.com/wesselkok/Toasts.js/master/toasts.min.css">toasts.min.css</a>
+        </li>
+      </ul>
+
+      <h2 id="wiki-and-change-log">Wiki and Change Log</h2>
+      <p><a href="https://github.com/wesselkok/Toasts.js/wiki">Wiki including Change Log</a></p>
+
+      <h2 id="quick-start">Quick Start</h2>
+
+      <h3 id="3-easy-steps">3 Easy Steps</h3>
+      <ol>
+        <li>
+          <p>Link to toasts.min.css <code
+              class="language-plaintext highlighter-rouge">&lt;link href="toasts.min.css" rel="stylesheet"/&gt;</code>
+          </p>
+        </li>
+        <li>
+          <p>Link to toasts.min.js <code
+              class="language-plaintext highlighter-rouge">&lt;script src="toasts.min.js"&gt;&lt;/script&gt;</code></p>
+        </li>
+        <li>
+          <p>Use Toasts.js to display a toast for success, info, warning, error or custom message</p>
+        </li>
+      </ol>
+
+      <div class="language-js highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="c1">// Display a Success Toast</span>
+<span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Success</span><span class="dl">'</span><span class="p">,</span> <span class="na">description</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Your purchase has been confirmed!</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+
+<span class="c1">// Display an Error Toast</span>
+<span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Sorry,</span><span class="dl">'</span><span class="p">,</span> <span class="na">description</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Something went wrong.</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h3 id="other-options">Other Options</h3>
+      <div class="language-js highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>
+<span class="c1">// Create a Toast and display after x seconds</span>
+<span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Sorry,</span><span class="dl">'</span><span class="p">,</span> <span class="na">description</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Something went wrong.</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">});</span>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">300</span><span class="p">;</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="nx">myToast</span><span class="p">.</span><span class="nx">show</span><span class="p">(),</span> <span class="nx">x</span><span class="p">);</span>
+
+<span class="c1">// Display an info Toast, with a title and description</span>
+<span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Friend Request</span><span class="dl">'</span><span class="p">,</span> <span class="na">description</span><span class="p">:</span> <span class="dl">'</span><span class="s1">John Doe wants to be friends with you.</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">info</span><span class="dl">'</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+
+<span class="c1">// Display an error Toast, with a title</span>
+<span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Error</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+
+<span class="c1">// Display a custom Toast, with a title, where your_class_name is your custom class</span>
+<span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Error</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">your_class_name</span><span class="dl">'</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+
+<span class="c1">// Remove created toast</span>
+<span class="nx">myToast</span><span class="p">.</span><span class="nx">remove</span><span class="p">()</span>
+
+</code></pre>
+        </div>
+      </div>
+
+      <h3 id="use-html-instead-of-the-title-and-description-option">Use HTML instead of the Title and Description option
+      </h3>
+      <p>In case you want to use HTML inside op the Toast</p>
+      <div class="language-js highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">html</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;div&gt;My custom div&lt;/div&gt;</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">your_class_name</span><span class="dl">'</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h3 id="close-button">Close Button</h3>
+      <p>Optionally disable the close button</p>
+      <div class="language-js highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Success</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span> <span class="na">closeButton</span><span class="p">:</span> <span class="kc">false</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h3 id="display-sequence-and-position">Display Sequence and Position</h3>
+      <p>Show newest Toast at the bottom (top is default)</p>
+      <div class="language-js highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Success</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span> <span class="na">newestOnTop</span><span class="p">:</span> <span class="kc">false</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+</code></pre>
+        </div>
+      </div>
+
+      <p>Show Toast at other positions (<code class="language-plaintext highlighter-rouge">bottom-left</code> is
+        default,
+        other predefined positions are: <code class="language-plaintext highlighter-rouge">top-left</code>, <code
+          class="language-plaintext highlighter-rouge">top-right</code>, <code
+          class="language-plaintext highlighter-rouge">bottom-right</code>)</p>
+      <div class="language-js highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Success</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span> <span class="na">position</span><span class="p">:</span> <span class="dl">'</span><span class="s1">top-right</span><span class="dl">'</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+</code></pre>
+        </div>
+      </div>
+
+      <p>Show Toasts at custom positions, where <code
+          class="language-plaintext highlighter-rouge">custom_position_class</code> is the class for the custom created
+        container</p>
+      <div class="language-js highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Success</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span> <span class="na">position</span><span class="p">:</span> <span class="dl">'</span><span class="s1">custom_position_class</span><span class="dl">'</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h3 id="callbacks">Callbacks</h3>
+      <div class="language-js highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="c1">// Define a callback for when the Toast is shown/hidden/clicked</span>
+<span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Success</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span> <span class="na">onShown</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello</span><span class="dl">'</span><span class="p">);</span> <span class="p">}}).</span><span class="nx">show</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Success</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span> <span class="na">onHidden</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Goodbye</span><span class="dl">'</span><span class="p">);</span> <span class="p">}}).</span><span class="nx">show</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Success</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span> <span class="na">onClick</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Clicked</span><span class="dl">'</span><span class="p">);</span> <span class="p">}}).</span><span class="nx">show</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Success</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span> <span class="na">onCloseClick</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Close button clicked</span><span class="dl">'</span><span class="p">);</span> <span class="p">}}).</span><span class="nx">show</span><span class="p">();</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h3 id="transitions-options">Transitions Options</h3>
+      <p>Toasts.js supplies default transition methods, so you do not have to provide any of these settings. However you
+        have th option to override the transition methods if you like.</p>
+
+      <p>Change Toast show transition method (default is <code
+          class="language-plaintext highlighter-rouge">slideDown</code>, other options are: <code
+          class="language-plaintext highlighter-rouge">fadeIn</code> or <code
+          class="language-plaintext highlighter-rouge">show</code>)</p>
+      <div class="language-js highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Success</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span> <span class="na">showMethod</span><span class="p">:</span> <span class="dl">'</span><span class="s1">fadeIn</span><span class="dl">'</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+</code></pre>
+        </div>
+      </div>
+      <p>Change Toast hide transition method (default is <code
+          class="language-plaintext highlighter-rouge">fadeOut</code>, other options are: <code
+          class="language-plaintext highlighter-rouge">slideUp</code> or <code
+          class="language-plaintext highlighter-rouge">hide</code>)</p>
+      <div class="language-js highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Success</span><span class="dl">'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span> <span class="na">hideMethod</span><span class="p">:</span> <span class="dl">'</span><span class="s1">slideUp</span><span class="dl">'</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h3 id="durations-and-timeout">Durations and Timeout</h3>
+      <p>Change show- and hide durations (default is <code class="language-plaintext highlighter-rouge">300</code>) and
+        timeout (default is <code class="language-plaintext highlighter-rouge">5000</code>) for Toasts in ms</p>
+      <div class="language-js highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Success</span><span class="dl">'</span><span class="p">,</span> <span class="na">description</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Your purchase has been confirmed!</span><span class="dl">'</span><span class="p">,</span> <span class="na">showDuration</span><span class="p">:</span> <span class="mi">350</span><span class="p">,</span> <span class="na">hideDuration</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="na">timeOut</span><span class="p">:</span> <span class="mi">3000</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+</code></pre>
+        </div>
+      </div>
+
+      <p>To prevent Toasts.js from auto closing based on the timeouts, set the <code
+          class="language-plaintext highlighter-rouge">timeOut</code> options to <code
+          class="language-plaintext highlighter-rouge">0</code></p>
+      <div class="language-js highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Success</span><span class="dl">'</span><span class="p">,</span> <span class="na">description</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Your purchase has been confirmed!</span><span class="dl">'</span><span class="p">,</span> <span class="na">timeOut</span><span class="p">:</span> <span class="mi">0</span><span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h2 id="authors">Authors</h2>
+      <p><strong>Wessel Kok</strong></p>
+      <ul>
+        <li><a href="https://twitter.com/wesselkok_">https://twitter.com/wesselkok_</a></li>
+        <li><a href="https://www.instagram.com/wesselkok_/">https://www.instagram.com/wesselkok_</a></li>
+      </ul>
+
+      <h2 id="copyright">Copyright</h2>
+      <p>Copyright © 2020</p>
+
+      <h2 id="license">License</h2>
+      <p>Toasts.js is under MIT license - http://www.opensource.org/licenses/mit-license.php</p>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Toasts.js 2020. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Additional Javascript (less is more)-->
+  <script>
+    $(document).ready(function () {
+
+      //=== Vars
+
+      var darkPosition = $("#read-me").position();
+      var i = 1;
+      let notifications = [
+        {
+          type: "success",
+          title: "Success",
+          description: "Your purchase has been confirmed!",
+          timeOut: 3000
+        },
+        {
+          type: "info",
+          title: "Friend Request",
+          description: "John Doe wants to be friends with you.",
+          timeOut: 0
+        },
+        {
+          type: "warning",
+          title: "Oops,",
+          description: "Access denied.",
+          timeOut: 9000
+        },
+        {
+          type: "error",
+          title: "Sorry,",
+          description: "Something went wrong.",
+          timeOut: 0
+        }
+      ]
+
+
+      //=== Functions
+
+      // Function: getNotification
+      var getNotification = function () {
+        i++;
+        if (i === notifications.length) {
+          i = 0;
+        }
+
+        return notifications[i];
+      };
+
+      // Function: scrollSite
+      function scrollSite(){
+        // Scroll
+        var scroll = $(window).scrollTop();
+
+        // Scroll
+        if (scroll >= (darkPosition.top - 150)) {
+          $("#mainNav").addClass("dark");
+        } else {
+          $("#mainNav").removeClass("dark");
+        }
+      }
+
+
+      //=== Binds
+
+      // Bind: create toast
+      $(document).off('click', '.toast-button');
+      $(document).on('click', '.toast-button', function () {
+        // Get notification
+        var notification = getNotification();
+
+        // Create Toast
+        new Toast({ title: notification.title, description: notification.description, type: notification.type, timeOut: notification.timeOut, position: 'custom' }).show();
+      });
+
+      // Bind: create toast from demo
+      $(document).off('click', '.toast-button-demo');
+      $(document).on('click', '.toast-button-demo', function () {
+
+        // Get values
+        var title = $("#demo-title").val();
+        var description = $("#demo-description").val();
+        var type = $('input[name="demo-type"]:checked').val();
+        var position = $('input[name="demo-position"]:checked').val();
+
+        // Create Toast
+        new Toast({ title: title, description: description, type: type, position: position }).show();
+      });
+
+
+      //=== Init
+
+      // Init iphone
+      new Toast({ title: notifications[0].title, description: notifications[0].description, type: notifications[0].type, timeOut: notifications[0].timeOut, position: 'custom' }).show();
+      new Toast({ title: notifications[1].title, description: notifications[1].description, type: notifications[1].type, timeOut: notifications[1].timeOut, position: 'custom' }).show();
+
+      // Init scroll
+      scrollSite();
+
+
+      //=== Listeners
+
+      // Listener: Animated scroll
+      $('a').click(function () {
+        $('html, body').animate({
+          scrollTop: ($($(this).attr('href')).offset().top > darkPosition.top ? $($(this).attr('href')).offset().top - 80 : $($(this).attr('href')).offset().top)
+        }, 700);
+        return false;
+      });
+
+      // Listener: Scroll
+      $(window).scroll(function() {    
+        scrollSite();
+      });
+    });
+  </script>
+
+</body>
+
+</html>
