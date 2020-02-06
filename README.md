@@ -5,11 +5,11 @@
 1.0.0
 
 ## Demo
-- Demo can be found at ...
+- Demo can be found at [https://wesselkok.github.io/Toasts.js/demo.html](https://wesselkok.github.io/Toasts.js/demo.html)
 
 ## Download
-- [toasts.min.js](https://github.com/wesselkok/Toasts.js/blob/master/toasts.min.js)
-- [toasts.min.css](https://github.com/wesselkok/Toasts.js/blob/master/toasts.min.css)
+- [toasts.min.js](https://raw.githubusercontent.com/wesselkok/Toasts.js/master/toasts.min.js)
+- [toasts.min.css](https://raw.githubusercontent.com/wesselkok/Toasts.js/master/toasts.min.css)
 
 ## Wiki and Change Log
 [Wiki including Change Log](https://github.com/wesselkok/Toasts.js/wiki)
@@ -22,15 +22,14 @@
 2. Link to toasts.min.js `<script src="toasts.min.js"></script>`
 
 3. Use Toasts.js to display a toast for success, info, warning, error or custom message
-  ```js
-  
-  // Display a Success Toast
-  var myToast = new Toast({title: 'Success', description: 'Your purchase has been confirmed!', type: 'success'}).show();
-  
-  // Display an Error Toast
-  var myToast = new Toast({title: 'Sorry,', description: 'Something went wrong.', type: 'error'}).show();
-  
-  ```
+
+```js
+// Display a Success Toast
+var myToast = new Toast({title: 'Success', description: 'Your purchase has been confirmed!', type: 'success'}).show();
+
+// Display an Error Toast
+var myToast = new Toast({title: 'Sorry,', description: 'Something went wrong.', type: 'error'}).show();
+```
 
 ### Other Options
 ```js
