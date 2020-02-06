@@ -154,7 +154,7 @@
    }
  }
  
- header.masthead {
+ header.masthead, section.full-page {
    position: relative;
    width: 100%;
    padding-top: 150px;
@@ -163,8 +163,12 @@
    background: url("../img/bg-pattern.png"), #7b4397;
    background: url("../img/bg-pattern.png"), linear-gradient(to left, #e0b548, #c77f0c);
  }
+
+ section.full-page {
+  background: #222222;
+ }
  
- header.masthead .header-content {
+ header.masthead .header-content, section.full-page .content {
    max-width: 500px;
    margin-bottom: 100px;
    text-align: center;
@@ -174,6 +178,12 @@
    font-size: 30px;
  }
  
+ header.masthead .device p {
+  text-align: center;
+  color: rgba(0,0,0,0.5);
+  padding: 0px 10px;
+}
+
  header.masthead .device-container {
    max-width: 325px;
    margin-right: auto;
@@ -185,13 +195,13 @@
  }
  
  @media (min-width: 992px) {
-   header.masthead {
+   header.masthead, section.full-page {
      height: 100vh;
      min-height: 775px;
      padding-top: 0;
      padding-bottom: 0;
    }
-   header.masthead .header-content {
+   header.masthead .header-content, section.full-page .content {
      margin-bottom: 0;
      text-align: left;
    }
@@ -206,8 +216,8 @@
  footer {
    padding: 25px 0;
    text-align: center;
-   color: rgba(255, 255, 255, 0.3);
-   background-color: #222222;
+   color: rgba(255, 255, 255, 0.5);
+   background: linear-gradient(to left, #e0b548, #c77f0c);
  }
  
  footer p {
@@ -224,14 +234,14 @@
    border-radius: 300px !important;
    letter-spacing: 2px;
    text-transform: uppercase;
-   background-color: rgba(255,255,255,0.8) !important;
+   background-color: rgba(255,255,255,0.8);
    padding: 15px 20px !important;
    color: #000;
    transition: all .3s;
  }
  
  .btn:hover {
-     background-color: rgba(255,255,255,1) !important;
+     background-color: rgba(255,255,255,1) ;
      color: #000;
  }
  
@@ -254,4 +264,34 @@
   line-height: initial;
   opacity: 1;
   float: none;
+}
+
+/* DEMO FORM */
+.demo-form {
+  padding-top: 25px;
+  border-radius: 5px;
+  background-color: #222222;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.demo-form input, .demo-form .custom-control-label::before, .demo-form input:focus{
+  background-color: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.4);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.demo-form .custom-radio .custom-control-input:checked~.custom-control-label::before{
+  background-color: #e0b548;
+}
+
+.demo-form .btn {
+  font-size: 1em;
+  letter-spacing: 2px;
+  padding: 10px 15px !important;
+  background-color: #c77f0c;
+  border-radius: 3px !important;
+}
+
+.demo-form .btn:hover {
+  background-color: #e0b548;
 }

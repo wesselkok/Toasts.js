@@ -101,3 +101,27 @@
 	display: block;
 	top: 43%; bottom: 43%; left: 89.9%; right: 3.2%;
 }
+
+/* MacBook 2015 */
+.device-mockup.macbook_2015 {
+	padding-bottom: 57.50%;
+}
+
+.device-mockup.macbook_2015 > .device,
+.device-mockup.macbook_2015.grey > .device {
+	background-image: url("../macbook_2015/grey.png");
+}
+
+.device-mockup.macbook_2015 > .device,
+.device-mockup.macbook_2015.silver > .device {
+	background-image: url("../macbook_2015/silver.png");
+}
+
+.device-mockup.macbook_2015 > .device,
+.device-mockup.macbook_2015.gold > .device {
+	background-image: url("../macbook_2015/gold.png");
+}
+
+.device-mockup.macbook_2015 > .device > .screen {
+    top: 7.5%; bottom: 10.9%; left: 12.46%; right: 12.56%;
+}
