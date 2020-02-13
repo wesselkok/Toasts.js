@@ -1,0 +1,205 @@
+
+/* TEMP */
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.framework-container {
+    background-color: #3498db;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* TOAST CONTAINER */
+.toast-container {
+    position: fixed;
+    z-index: 999999;
+    pointer-events: none;
+
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* POSITIONS */
+    &.top-left {
+        left: 12px;
+        top: 12px;
+    }
+    &.top-right {
+        right: 12px;
+        top: 12px;
+    }
+    &.bottom-left {
+        left: 12px;
+        bottom: 12px;
+    }
+    &.bottom-right {
+        right: 12px;
+        bottom: 12px;
+    }
+}
+
+/* TOAST */
+.toast {
+    position: relative;
+    pointer-events: auto;
+    overflow: hidden;
+    margin: 0 0 6px;
+    width: 300px;
+    border-left: 5px solid transparent;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #000;
+    background-color: rgba(255,255,255,1);
+    filter: brightness(90%);
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+    display: none;
+    -webkit-transition: box-shadow 0.3s ease, filter 0.3s ease;
+    -moz-transition: box-shadow 0.3s ease, filter 0.3s ease;
+    transition: box-shadow 0.3s ease, filter 0.3s ease;
+
+
+    /* STATES */
+    &.success {
+        border-left: 5px solid #47D764;
+        .icon{
+            color: #47D764;
+        }
+
+        .button {
+            &:hover {
+                background-color: #47D764;
+            }
+        }
+    }
+    &.info {
+        border-left: 5px solid #2F86EB;
+        .icon{
+            color: #2F86EB;
+        }
+
+        .button {
+            &:hover {
+                background-color: #2F86EB;
+            }
+        }
+    }
+    &.warning {
+        border-left: 5px solid #FFC021;
+        .icon{
+            color: #FFC021;
+        }
+
+        .button {
+            &:hover {
+                background-color: #FFC021;
+            }
+        }
+    }
+    &.error {
+        border-left: 5px solid #EA3E3E;
+        .icon{
+            color: #EA3E3E;
+        }
+
+        .button {
+            &:hover {
+                background-color: #EA3E3E;
+            }
+        }
+    }
+
+    &:hover {
+        -webkit-box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.2);
+        box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.2);
+        //background-color: rgba(255,255,255,1);
+        filter: brightness(100%);
+    }
+
+    &.active {
+        background-color: rgba(255,255,255,1);
+    }
+
+
+
+    /* CONTENT */
+    .toast-content {
+        height: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .icon {
+            margin: auto; /* Important */ 
+            text-align: center; 
+            /*font-size: 20px;*/
+            width: 25px;
+            margin-left: 10px;
+        }
+    
+        .content {
+            margin: auto; /* Important */ 
+            width: 100%;
+            letter-spacing: 1.05px;
+            padding: 10px 10px;
+            .title {
+                color: rgba(0,0,0,1);
+                font-weight: bold;
+                font-size: 15px;
+            }
+            .description {
+                color: rgba(0,0,0,0.6);
+                font-size: 12px;
+            }
+
+            &.margin {
+                .title {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    
+        .close {
+            margin: auto; /* Important */ 
+            text-align: center;
+            color: rgba(0,0,0,0.6);
+            width: 25px;
+            margin-right: 10px;
+            transition: all .3s;
+            cursor: pointer;
+
+            &:hover{
+                color: rgba(0,0,0,0.8);
+            }
+        }
+
+        .button {
+            margin: auto; /* Important */ 
+            text-align: center;
+            color: rgba(0,0,0,0.6);
+            margin-right: 10px;
+            transition: all .3s;
+            background-color: rgba(0,0,0,0.1);
+            padding: 5px 10px;
+            border-radius: 3px;
+
+            
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
