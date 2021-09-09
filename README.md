@@ -5,7 +5,7 @@
 1.0.0
 
 ## Demo
-- Demo can be found at [https://wesselkok.github.io/Toasts.js/demo.html](https://wesselkok.github.io/Toasts.js/demo.html)
+- Demo can be found at [https://wesselkok.github.io/Toasts.js](https://wesselkok.github.io/Toasts.js)
 
 ## Download
 - [toasts.min.js](https://raw.githubusercontent.com/wesselkok/Toasts.js/master/toasts.min.js)
